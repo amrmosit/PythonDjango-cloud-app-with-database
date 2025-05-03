@@ -1,15 +1,52 @@
+# Django Online Course Assessment Feature
 
-**General Notes**
+This project adds a **course assessment feature** to an existing Django-based online course platform. As part of a full-stack developer task, I implemented the ability to create and manage exams (questions and choices), allow users to submit answers, and view graded results.
 
-An `onlinecourse` app has already been provided in this repo upon which you will be adding a new assesement feature.
+## 📌 Project Description
 
-- If you want to develop the final project on Theia hosted by [IBM Developer Skills Network](https://labs.cognitiveclass.ai/), you will need to create the same project structure on Theia workspace and save it everytime you close the browser
-- Or you could develop the final project locally by setting up your own Python runtime and IDE
-- Hints for the final project are left on source code files
-- You may choose any cloud platform for deployment (default is IBM Cloud Foundry)
-- Depends on your deployment, you may choose any SQL database Django supported such as SQLite3, PostgreSQL, and MySQL (default is SQLite3)
+The objective was to enhance an online course application by adding a complete exam and submission system. Users can now:
 
-**ER Diagram**
-For your reference, we have prepared the ER diagram design for the new assesement feature.
+- View course exams
+- Select answers from choices
+- Submit responses
+- View graded exam results
 
-![Onlinecourse ER Diagram](https://github.com/ibm-developer-skills-network/final-cloud-app-with-database/blob/master/static/media/course_images/onlinecourse_app_er.png)
+This was done using Django models, views, templates, and the admin interface.
+
+## 🧩 Features Implemented
+
+- `Question`, `Choice`, and `Submission` models
+- Admin site integration to manage exam content
+- Exam form on the course detail page
+- Result evaluation logic and grading view
+- Result display template with correct/incorrect answers
+
+## 🛠️ Tech Stack
+
+- Python 3.11
+- Django Web Framework
+- SQLite3 (default)
+- HTML/CSS (Django templating)
+- Git + GitHub for version control
+
+## 🚀 How to Run Locally
+
+```bash
+# Clone the starter repo
+git clone https://github.com/amrmosit/PythonDjango-cloud-app-with-database.git
+cd PythonDjango-cloud-app-with-database
+
+# Set up virtual environment
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+
+# Install required packages
+pip install -U -r requirements.txt
+
+# Apply migrations
+python manage.py makemigrations
+python manage.py migrate
+
+# Run the development server
+python manage.py runserver
